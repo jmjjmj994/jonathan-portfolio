@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.7;
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --header-nav-footer--bg--color: #feb28c;
+  --main--bg--color: #fdd699;
+  --components--bg--color: #c2aff0;
+
+  --nav--footer--font--size: 1.5rem;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10rem 1fr 5rem;
+}
+
+.header {
+  background-color: var(--header-nav-footer--bg--color);
+  display: flex;
+}
+main {
+  background-color: var(--main--bg--color);
+}
+
+.logo {
+  height: 10rem;
+  width: 10rem;
+  margin-right: auto;
+}
+
+.logo img {
+  height: auto;
+  max-width: 100%;
+}
+.nav {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  background-color: var(--header-nav-footer--bg--color);
+}
+
+.nav-ul {
+  display: flex;
+}
+
+.nav-item {
+  padding: 20px 20px;
+  font-size: var(--nav--footer--font--size);
+  color: inherit;
+}
+
+.index-main {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: max-content max-content;
+  gap: 10rem;
+}
+
+.main-banner {
+  display: grid;
+  grid-template-columns: minmax(30rem, 1fr) minmax(20rem, 40rem);
+  justify-content: center;
+  margin: 0 1rem;
+}
+.main-banner-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-banner--header {
+  color: white;
+  font-size: 3rem;
+}
+.main-banner-content {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.main-banner-content img {
+  height: auto;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.main-banner-content--icons {
+  background-color: var(--components--bg--color);
+  display: flex;
+  box-shadow: 10px 10px 5px;
+  padding: 0 10px;
+}
+
+.main-banner-icon {
+  padding: 5px;
+}
+
+.main-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 55rem));
+  grid-auto-rows: minmax(20rem, 40rem);
+  gap: 1rem;
+  place-content: center;
+
+  padding: 40px 40px;
+}
+
+.large-cards {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.large-cards--header {
+  background-color: var(--components--bg--color);
+  flex: 1 1 auto;
+}
+.large-cards--body {
+  flex: 1 1 50%;
+  background-color: #d9d9d9;
+}
+.large-cards--footer {
+  flex: 1 1 auto;
+  background-color: #d9d9d9;
+}
+
+.footer {
+  background-color: var(--header-nav-footer--bg--color);
+}
