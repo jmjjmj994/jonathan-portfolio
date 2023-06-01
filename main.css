@@ -117,13 +117,14 @@ main {
   padding: 10px 10px 0;
 }
 .welcome-primary--gradient {
-  background-image: linear-gradient(
+  color: var(--header--footer--background--color);
+/*   background-image: linear-gradient(
     90deg,
     rgb(14, 109, 152) 20%,
     rgb(3, 59, 114) 100%
   );
   background-clip: text;
-  color: transparent;
+  color: transparent; */
 }
 .welcome__secondary {
   padding: 10px 10px 0;
