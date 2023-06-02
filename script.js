@@ -1,25 +1,14 @@
-/** DOM elements */
-import { navBar, navArrows } from "./utilities.js";
+import { header } from "./utilities.js";
 
-/** DOM elements */
-console.log(navArrows);
-/* 
-navArrows.forEach((arrow) => {
-    console.log(arrow)
-  let navExpand = false;
-  arrow.onmouseenter = () => {
-    if (!navExpand) {
-      navBar.classList.toggle("active");
-      navExpand = true;
-    }
-    };
 
-    arrow.onmouseleave = () => { 
-        navBar.classList.toggle("active")
-    }
 
-    
-   
-    
+window.addEventListener("scroll", function () {
+  let scrollY = window.scrollY;
+  if (scrollY > 0) {
+   header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+ }
+
+
 });
- */
