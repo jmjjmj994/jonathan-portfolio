@@ -185,7 +185,7 @@ body {
 .main {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: calc(100dvh - 5rem) 35dvh minmax(50rem, 1fr) 50dvh; /*Fiks senere*/
+  grid-template-rows: calc(100dvh - 5rem) auto minmax(50rem, 1fr) 50dvh; /*Fiks senere*/
 }
 
 /** top container **/
@@ -275,16 +275,17 @@ body {
 .about-card {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 .about-card__header {
 }
 .about-primary {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 .about-card__body {
 }
 .about-secondary {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: inline-block;
 }
 
