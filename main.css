@@ -45,6 +45,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 5px 0 5px;
+  background-color: #5465FF;
 }
 .hamburger {
   display: none;
@@ -195,8 +196,9 @@ body {
   grid-template-rows: max-content;
   justify-content: center;
   align-content: center;
-  margin: 0 1rem;
+  margin: 0 1rem; 
   padding: 0 5px 0 5px;
+ 
 }
 @media screen and (width <= 1000px) {
   .page-hero {
@@ -269,13 +271,14 @@ body {
   grid-template-rows: max-content;
   justify-content: center;
   align-content: center;
-  background-color: red;
+background-color: #788BFF;
 }
 
 .about-card {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 40px 40px 100px;
+ 
 }
 .about-card__header {
 }
@@ -291,7 +294,7 @@ body {
 
 /** about container */
 .page-projects {
-  background-color: #969696;
+
   display: grid;
   grid-template-columns: repeat(1, minmax(200px, 60rem));
   grid-template-rows: 30rem 30rem 30rem;
@@ -305,7 +308,7 @@ body {
 }
 
 .project-card {
-  background-color: white;
+  background-color: rgb(61, 42, 42);
   display: grid;
   grid-template-columns: 20rem 1fr;
   grid-template-rows: 100%;
@@ -322,6 +325,7 @@ body {
 .project-card__header {
 }
 
+.projec
 .project--primary {
   padding: 0px 0px 20px;
   font-size: 1.8rem;
