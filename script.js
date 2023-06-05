@@ -1,4 +1,4 @@
-import { header } from "./utilities.js";
+import { header, hamburger, nav } from "./utilities.js";
 
 
 
@@ -12,3 +12,20 @@ window.addEventListener("scroll", function () {
 
 
 });
+
+
+hamburger.onclick = () => {
+  let menuOpen = false;
+
+  if (!menuOpen) {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active")
+    let menuOpen = true;
+  } else {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active")
+    let menuOpen = false;
+  }
+
+};
+
