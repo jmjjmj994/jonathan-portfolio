@@ -201,8 +201,8 @@ body {
    overflow: hidden;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: calc(100dvh - 5rem) auto minmax(50rem, 1fr) 50dvh; /*Fiks senere*/
-  gap: 2rem;
+  grid-template-rows: calc(100dvh - 5rem) min-content minmax(50rem, 1fr) 50dvh; /*Fiks senere*/
+
 }
 
 /** top container **/
@@ -288,6 +288,7 @@ body {
   justify-content: center;
   align-content: center;
   background-color: #788bff;
+  margin-top: 5rem;
 }
 
 .about-card {
