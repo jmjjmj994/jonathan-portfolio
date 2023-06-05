@@ -34,6 +34,7 @@ a {
 }
 
 body {
+ 
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   display: grid;
@@ -45,8 +46,14 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 5px 0 5px;
-  background-color: #5465FF;
+  background-color: #788bff;
+  position: relative;
+
 }
+
+
+
+
 .hamburger {
   display: none;
 }
@@ -87,7 +94,6 @@ body {
 @media screen and (width <= 1000px) {
   .header {
     align-items: center;
-    margin: 0 0.5rem;
   }
   .nav {
     position: fixed;
@@ -184,6 +190,7 @@ body {
 }
 
 .main {
+   overflow: hidden;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: calc(100dvh - 5rem) auto minmax(50rem, 1fr) 50dvh; /*Fiks senere*/
@@ -196,19 +203,18 @@ body {
   grid-template-rows: max-content;
   justify-content: center;
   align-content: center;
-  margin: 0 1rem; 
+  margin: 0 1rem;
   padding: 0 5px 0 5px;
- 
 }
 @media screen and (width <= 1000px) {
   .page-hero {
-    grid-template-columns: minmax(15rem, 25rem);
+    grid-template-columns: minmax(15rem, 20rem);
     align-content: start;
   }
 
   .hero-card__image {
     grid-row: 1;
-    margin-top: 5rem;
+    margin-top: 10rem;
   }
 }
 
@@ -239,7 +245,7 @@ body {
 }
 .hero-card--secondary {
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .hero-card__footer {
   margin-left: 1rem;
@@ -260,6 +266,7 @@ body {
   height: auto;
   max-width: 100%;
   border-radius: 50%;
+  outline: 3px solid #788bff;
 }
 
 /** top container **/
@@ -267,18 +274,19 @@ body {
 /** about container */
 .page-about {
   display: grid;
-  grid-template-columns: minmax(25rem, 40rem);
+  grid-template-columns: minmax(15rem, 40rem);
   grid-template-rows: max-content;
   justify-content: center;
   align-content: center;
-background-color: #788BFF;
+  background-color: #788bff;
 }
 
 .about-card {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   padding: 40px 40px 100px;
- 
+  color: var(--text--color);
 }
 .about-card__header {
 }
@@ -294,71 +302,125 @@ background-color: #788BFF;
 
 /** about container */
 .page-projects {
-
   display: grid;
-  grid-template-columns: repeat(1, minmax(200px, 60rem));
-  grid-template-rows: 30rem 30rem 30rem;
+  grid-template-columns: repeat(1, minmax(200px, 70rem));
+  grid-template-rows: 25rem 40rem 30rem;
   gap: 1rem;
-
   justify-content: center;
   align-content: center;
+ 
 }
+
+
 
 .page-contact {
 }
-
 .project-card {
-  background-color: rgb(61, 42, 42);
+ 
+}
+
+.card1 {
+  margin: 1rem;
+ display: flex;
+  box-shadow: 0 0 5px;
+  padding: 20px;
+}
+
+
+.card2 {
+    margin: 1rem;
   display: grid;
-  grid-template-columns: 20rem 1fr;
+  grid-template-columns: 1fr 30rem;
+  grid-template-rows: 100%;
+  box-shadow: 0 0 5px;
+}
+.card3 {
+      margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 30rem;
   grid-template-rows: 100%;
   box-shadow: 0 0 5px;
 }
 
-.project-card__left {
+.project-card__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 20px;
+  flex: 0 1 50%;
 }
 
 .project-card__header {
+  width: 100%;
 }
 
-.projec
 .project--primary {
-  padding: 0px 0px 20px;
   font-size: 1.8rem;
+  padding: 10px 10px 20px;
 }
 .project-card__body {
+  width: 100%;
 }
 .project--secondary {
-  font-size: 1.2rem;
-  display: block;
-  padding: 0 5px 0 5px;
+  font-size: 1.3rem;
+  display: inline-block;
+  padding: 10px 10px 20px;
 }
 
 .project-card__footer {
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  width: 100%;
 }
 .project-card__icon {
   width: 2rem;
 }
 
-.project-card__right {
-  padding: 20px;
+.project-card__image {
+flex: 0 1 50%;
+overflow: scroll;
+  box-shadow: 0 0 10px rgb(28, 0, 24);
+  border-radius: 5px;
 }
 
-.project-card__right img {
-  height: 100%;
+
+.project-card__image img {
+  height:auto;
   max-width: 100%;
+ cursor: pointer;
+
+ border: 5px;
+
+
+}
+@media screen and (width <= 1000px) {
+  .page-projects {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(200px, 40rem));
+  grid-template-rows: 40rem 50rem 40rem 30rem;
+  gap: 1rem;
+  justify-content: center;
+  align-content: center;
+ 
+  background-color: green;
+}
+  
+.card1, .card2, .card3 {
+  margin: 1rem;
+ display: flex;
+ flex-direction: column;
+  box-shadow: 0 0 5px;
+  
+}
+.project-card__content {
+  order: 2;
 }
 
-/*
-    font-family: 'Open Sans', sans-serif;
+}
 
-    font-family: 'Poppins', sans-serif;
 
-    font-family: 'Ubuntu', sans-serif;
-    */
+
+
+
