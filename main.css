@@ -288,6 +288,7 @@ body {
   justify-content: center;
   align-content: center;
   background-color: #788bff;
+margin-top: 10rem;
 
 }
 
@@ -299,7 +300,7 @@ body {
   gap: 0.5rem;
   padding: 40px 50px 80px;
   color: var(--text--color);
-  background-color: orange;
+ 
 }
 .about-card__header {
 }
