@@ -1,0 +1,6 @@
+list of 3 projects
+each card must have:
+* the title of the project
+* a description
+* a screenshot of the project
+* a link to the github repo and live site

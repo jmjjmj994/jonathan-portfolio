@@ -1,13 +1,4 @@
 
-.information-cards {
-  display: flex;
-  justify-content: center;
-  height: 30rem;
-  max-width: 80rem;
-  width: 100%;
-  border-radius: 20px;
- 
-}
 .hero-section {
   display: flex;
   justify-content: center;
@@ -27,6 +18,7 @@
   justify-content: center;
   align-items: center;
   text-align: start;
+ 
 }
 
 .hero-card__header {
@@ -155,17 +147,30 @@ gap: 1rem;
 
 
 
+.information-cards {
+  display: flex;
+  justify-content: center;
+  height: 30rem;
+  max-width: 80rem;
+  width: 100%;
+  border-radius: 20px;
+
+ 
+}
 
 
 .about-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: peru;
 }
 
 .about-card {
   display: flex;
   align-items: center;
+
+
 }
 
 .about-card__image {
@@ -179,8 +184,8 @@ gap: 1rem;
   gap: 1rem;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  text-align: start;
+  align-items: center;
+  
 }
 
 .about-card__header {
