@@ -1,4 +1,4 @@
-import { header, hamburger, nav } from "./utilities.js";
+import { header, hamburger, nav, projectImg1, projectImg2} from "./utilities.js";
 
 
 
@@ -30,3 +30,22 @@ hamburger.onclick = () => {
 };
 
 
+
+
+  projectImg1.onmouseenter = () => { 
+projectImg1.classList.add("scrolled")
+
+}
+projectImg1.onmouseleave = () => { 
+  projectImg1.classList.remove("scrolled")
+} 
+
+
+
+
+ projectImg2.onmouseenter = () => {
+   projectImg2.classList.add("scrolled");
+ };
+ projectImg2.onmouseleave = () => {
+   projectImg2.classList.remove("scrolled");
+ };  
