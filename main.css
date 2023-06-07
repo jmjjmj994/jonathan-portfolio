@@ -66,10 +66,9 @@ body {
   justify-content: space-between;
   padding: 0 5px 0 5px;
   position: relative;
-  
+
   background-color: var(--header--nav--bg--color);
 }
-
 
 .hamburger {
   display: none;
@@ -227,45 +226,51 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: rgb(18, 15, 8);
+ background: rgb(18, 15, 8); 
+ border-radius: 10px;
 }
 
 .project-card--3 {
 }
- .project-card:hover:before,
+.project-card:hover:before,
 .project-card:hover:after {
-  transition: opacity 0.3s;
+  transition: opacity 1s;
   opacity: 1;
-}  
+}
 
 /** Chrome */
 .project-card::before,
 .project-card::after {
+  border-radius: inherit;
   content: "";
   position: absolute;
-inset: -1px;
-   background: conic-gradient(
+  inset: -1px;
+  background: conic-gradient(
     from var(--conic-dreams),
     var(--clr-1),
     var(--clr-2),
-    var(--clr-3),
-    var(--clr-4),
-    var(--clr-4),
-    var(--clr-3),
-    var(--clr-2),
-    var(--clr-1)
+      var(--clr-2)
+   
+   
   );
   z-index: -1;
   opacity: 0;
-animation: glowingCard 15s infinite ease-in;
+  animation: glowingCard 15s infinite ease-in;
 }
 @keyframes glowingCard {
   0% {
-    --conic-dreams:0deg;
+    --conic-dreams: 0deg;
+  
   }
- 
+
+   50% {
+    --conic-dreams: 180deg;
+   
+  }
+
   100% {
-    --conic-dreams:360deg;
+    --conic-dreams: 360deg;
+ 
   }
 }
 
@@ -274,50 +279,49 @@ animation: glowingCard 15s infinite ease-in;
 /** FireFox */
 
 @-moz-document url-prefix() {
-.project-card::before,
-.project-card::after {
-opacity: 0;
-   background: linear-gradient(
-    45deg,
-    var(--clr-1),
+  .project-card::before,
+  .project-card::after {
+    opacity: 0;
+    background: linear-gradient(
+      45deg,
+      var(--clr-1),
     var(--clr-2),
-    var(--clr-3),
-    var(--clr-4),
-    var(--clr-4),
-    var(--clr-3),
-    var(--clr-2),
-    var(--clr-1)
-  );
-  background-size: 450% 100%;
+      var(--clr-1)
+   
+    );
+    background-size: 450% 100%;
 
-animation: glowingCardFirefox 15s infinite ease-in;
-}
-
-
+    animation: glowingCardFirefox 10s infinite ease-in;
+  }
 }
 
 @keyframes glowingCardFirefox {
-  0% {background-position: 0%;}
-  100% {background-position: 100% ;}}
+  0% {
+    background-position: 0%;
+   
+  }
+  100% {
+    background-position: 100%;
+  }
+}
 /** FireFox */
-
 
 .project-card::after {
   filter: blur(10px);
-
 }
-
-
 
 .project-card--3 {
-  background: none;
+  /* background: none; */
 }
-
-
 
 .project-card__header {
   flex: 0 1 20rem;
   overflow: hidden;
+  margin: 1rem;
+}
+
+.project-card__header > img {
+  border-radius: 10px;
 }
 
 .scrolling-image-1 {
@@ -355,7 +359,7 @@ animation: glowingCardFirefox 15s infinite ease-in;
 .project-card__body {
   color: var(--card--text--color);
   flex: 1 1 auto;
-   display: flex;
+  display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
@@ -364,31 +368,29 @@ animation: glowingCardFirefox 15s infinite ease-in;
   font-size: 1.6rem;
   font-weight: normal;
   padding: 15px;
- 
-
 }
 .project-card__secondary {
   font-size: 1.1rem;
- max-width: 30ch;
- text-align: center;
+  max-width: 30ch;
+  text-align: center;
 }
 
 .project-card__footer {
   display: flex;
-  justify-content:center;
- 
+  justify-content: center;
+
   position: absolute;
   width: 100%;
   bottom: 0;
   gap: 1rem;
 }
 .github-container {
-width: 5rem;
+  width: 5rem;
 }
 
-
 .demo-container {
-width: 5rem;}
+  width: 5rem;
+}
 
 .project-card--icon {
   width: 1.5rem;
@@ -399,14 +401,15 @@ width: 5rem;}
   font-size: 1.5em;
 }
 
-.github-container, .demo-container  {
+.github-container,
+.demo-container {
   display: flex;
   gap: 0.5rem;
   padding: 5px;
 }
 
-
-.github-container, .demo-container > span {
+.github-container,
+.demo-container > span {
   color: var(--card--text--color);
 }
 
@@ -419,3 +422,24 @@ width: 5rem;}
   background-color: orange;
   transform: skew(60deg);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

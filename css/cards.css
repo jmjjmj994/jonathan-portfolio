@@ -64,11 +64,6 @@
   fill: var(--card--text--color);
 }
 
-.about-card__content {
-  color: var(--card--text--color);
-}
-
-
 
 
 @media  (width <= 900px) {
@@ -158,20 +153,21 @@ gap: 1rem;
  
 }
 
-
 .about-section {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: peru;
+  
 }
+
 
 .about-card {
   display: flex;
   align-items: center;
 
-
 }
+
 
 .about-card__image {
 }
