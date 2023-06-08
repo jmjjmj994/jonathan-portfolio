@@ -256,21 +256,23 @@ body {
 .contact-icons__box1 {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 5rem;
-  height: 5rem;
+  height: 5.5rem;
  
   border-radius: 5px;
   position: relative;
 }
 
 .contact-icons__box2 {
-  border-radius: 5px;
+
  /*  background-color: rgb(40, 31, 55); */
   display: flex;
   justify-content: center;
   width: 5rem;
   height: 5rem;
   position: relative;
+  align-items: center;
 }
 
 .contact-icon {
