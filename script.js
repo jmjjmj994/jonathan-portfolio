@@ -1,4 +1,4 @@
-import { header, hamburger, nav, projectImg1, projectImg2} from "./utilities.js";
+import { header, hamburger, nav, projectImg1, projectImg2, navItem} from "./utilities.js";
 
 
 
@@ -14,20 +14,37 @@ window.addEventListener("scroll", function () {
 });
 
 
-hamburger.onclick = () => {
-  let menuOpen = false;
 
+
+
+
+
+hamburger.onclick = () => {
+  navItem.forEach((item, index) => {
+  
+ 
+
+    item.style.transitionDelay = `${index * 0.05}s` 
+    item.classList.toggle("active")
+  });
+
+
+  let menuOpen = false;
   if (!menuOpen) {
+
     hamburger.classList.toggle("active");
     nav.classList.toggle("active")
     let menuOpen = true;
   } else {
+  
     hamburger.classList.toggle("active");
     nav.classList.toggle("active")
     let menuOpen = false;
   }
 
 };
+
+
 
 
 
@@ -48,4 +65,7 @@ projectImg1.onmouseleave = () => {
  };
  projectImg2.onmouseleave = () => {
    projectImg2.classList.remove("scrolled");
- };  
+};  
+
+
+

@@ -74,18 +74,20 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 0 5px 0 5px;
+
   z-index: 1;
-  position: sticky;
-  top: 0;
+
+
 }
 
 .hamburger {
   display: none;
+  margin-right: 1rem;
 }
 
 .header-logo {
   flex: 0 1 5rem;
+  margin-left: 1rem;
 }
 .header-logo img {
   height: auto;
@@ -100,6 +102,7 @@ body {
 }
 
 .nav-ul {
+  margin-right: 1rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -110,12 +113,9 @@ body {
 .nav-item {
   font-size: 1rem;
   color: var(--card--text--color);
-  font-weight: 600;
+  font-weight: normal;
   letter-spacing: 0;
   padding: 0 5px;
-}
-
-.nav-li {
 }
 
 @media screen and (width <= 1000px) {
@@ -124,21 +124,22 @@ body {
   }
   .nav {
     position: fixed;
-    left: 0;
+
     top: 0;
     height: 100%;
-    background: rgb(16, 34, 40);
+    background: rgba(16, 34, 40, 0.822);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-    backdrop-filter: blur(14.5px);
+    backdrop-filter: blur(10.5px);
     -webkit-backdrop-filter: blur(10.5px);
+    width: 0%;
 
-    width: 0;
     transition: 0.3s;
     /* width: 10rem; */
   }
 
   .nav.active {
     width: 100%;
+
     transition: 0.3s;
   }
   .nav.active .nav-ul {
@@ -149,8 +150,21 @@ body {
     justify-content: center;
     gap: 5rem;
     opacity: 0;
- 
   }
+
+
+  .nav-item {
+    opacity: 0;
+    transform: translateX(-300px);
+    display: block;
+  }
+
+  .nav-item.active {
+    opacity: 1;
+    transition: 600ms;
+    transform: translateX(0);
+  }
+
 
   .hamburger {
     cursor: pointer;
@@ -158,16 +172,16 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 3rem;
-    height: 3rem;
-    z-index: 1; /** Z index here*/
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 1;
   }
   .hamburger-icon {
     display: flex;
     align-items: center;
     position: relative;
-    width: 1.7rem;
-    height: 1.1rem;
+    width: 1.5rem;
+    height: 1rem;
     transform: rotate(0);
     transition: 0.3s;
   }
@@ -179,7 +193,7 @@ body {
     position: absolute;
     display: block;
     width: 100%;
-    height: 0.2rem;
+    height: 0.115rem;
     background-color: var(--card--text--color);
     transition: 0.3s;
   }
@@ -219,6 +233,10 @@ body {
     width: 50%;
     transform: rotate(0);
   }
+
+  /** Animations*/
+
+  /** */
 }
 
 .main {
@@ -230,6 +248,7 @@ body {
 
 .contact-section {
   margin-top: 10rem;
+  
 }
 
 .contact-card {
@@ -251,6 +270,7 @@ body {
   padding: 20px;
   margin-top: 3rem;
   gap: 5rem;
+  
 }
 
 .contact-icons__box1 {
@@ -259,14 +279,13 @@ body {
   align-items: center;
   width: 5rem;
   height: 5.5rem;
- 
+
   border-radius: 5px;
   position: relative;
 }
 
 .contact-icons__box2 {
-
- /*  background-color: rgb(40, 31, 55); */
+  /*  background-color: rgb(40, 31, 55); */
   display: flex;
   justify-content: center;
   width: 5rem;
@@ -289,10 +308,26 @@ body {
   inset: 0;
 }
 
-
 .footer-primary {
   color: var(--clr-3);
   font-size: 1rem;
   padding: 10px;
   font-weight: normal;
+}
+
+
+.hero-card__icon {
+  border-radius: 5px;
+display: block;
+width: 2.5rem;
+padding: 5px;
+  fill: var(--card--text--color);
+  cursor: pointer;
+  position: relative;
+   transition: 250ms
+}
+
+.hero-card__icon:hover {
+  filter: drop-shadow(0 0 10px white);
+  transition: 250ms;
 }
