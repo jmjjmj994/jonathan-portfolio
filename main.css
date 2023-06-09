@@ -9,6 +9,7 @@
 
 html {
   line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1,
