@@ -45,13 +45,13 @@ a {
   --card--text--color: #fbfbfb;
   --component--color: #e08e45;
   --card--global--margin: 0 1rem;
---nav--item-clr:#9e9d9d;
+  --nav--item-clr: #9e9d9d;
   --gradient-clr-1: rgb(29, 30, 21);
   --gradient-clr-2: rgb(42, 31, 63);
   --gradient-clr-3: rgb(51, 26, 53);
 
---card--clr-1:rgb(32, 22, 37);
---card--clr-2:rgb(8, 39, 46);
+  --card--clr-1: rgb(32, 22, 37);
+  --card--clr-2: rgb(8, 39, 46);
 
   --clr-1: #34006f77;
   --clr-2: #1f1f1f;
@@ -64,16 +64,15 @@ a {
   --text--color: #080808;
 }
 
-[data-theme="light"]{
---primary--color:#efefef;
+[data-theme="light"] {
+  --primary--color: #efefef;
 }
 body {
   background: radial-gradient(
-farthest-side,
-var(--gradient-clr-1),
-var(--gradient-clr-2),
-var(--gradient-clr-3)
-
+    farthest-side,
+    var(--gradient-clr-1),
+    var(--gradient-clr-2),
+    var(--gradient-clr-3)
   );
   background-color: var(--primary--color);
   /*  */
@@ -85,10 +84,6 @@ var(--gradient-clr-3)
   grid-template-rows: 5rem 1fr auto;
   animation: movingBody 2s infinite;
 }
-
-
-
-
 
 .header {
   display: flex;
@@ -112,7 +107,6 @@ var(--gradient-clr-3)
   filter: invert(100%);
 }
 .nav {
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -122,7 +116,7 @@ var(--gradient-clr-3)
 .nav-ul {
   margin-right: 1rem;
   width: 50%;
- 
+
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -132,13 +126,12 @@ var(--gradient-clr-3)
 
 .nav-item {
   font-size: 1rem;
-  color:var(--nav--item-clr) ;
+  color: var(--nav--item-clr);
   font-weight: normal;
   letter-spacing: 0;
   padding: 0 5px;
   transition: 250ms;
 }
-
 
 @media screen and (width <= 1000px) {
   .header {
@@ -151,7 +144,7 @@ var(--gradient-clr-3)
   }
   .nav {
     position: fixed;
-left: 0;
+    left: 0;
     top: 0;
     height: 100%;
     background: rgba(16, 34, 40, 0.822);
@@ -202,7 +195,6 @@ left: 0;
     height: 2.5rem;
     z-index: 1;
     order: 2;
-   
   }
   .hamburger-icon {
     display: flex;
@@ -420,17 +412,15 @@ left: 0;
   margin-bottom: 0.3rem;
   display: flex;
   align-items: center;
- 
 }
 
 .demo-container {
   width: 5rem;
   display: flex;
   align-items: center;
-  
+
   margin-bottom: 0.3rem;
   position: relative;
-
 }
 
 .project-card--icon {
@@ -445,8 +435,6 @@ left: 0;
   font-size: 1.1em;
   display: block;
 }
-
-
 
 .github-container,
 .demo-container {
@@ -471,38 +459,13 @@ left: 0;
   transform: skew(60deg);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .about-section {
   display: flex;
   justify-content: center;
   align-items: center;
 
-background-color: #08080827;
+  background-color: #08080827;
 }
-
-
 
 .about-card {
   display: flex;
