@@ -1,2 +1,2 @@
 # jonathan-portfolio
-My personal portfolio
+Jonathan Braaten Mjøs portfolio
