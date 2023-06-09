@@ -58,6 +58,22 @@
   
 }
 
+.hero-card__icon {
+  border-radius: 5px;
+display: block;
+width: 2.5rem;
+padding: 5px;
+  fill: var(--card--text--color);
+  cursor: pointer;
+  position: relative;
+   transition: 250ms
+}
+
+.hero-card__icon:hover {
+  filter: drop-shadow(0 0 10px white);
+  transition: 250ms;
+}
+
 
 
 
@@ -130,7 +146,7 @@
     gap: 1rem;
   }
   .hero-card__icon {
-    width: 1.5rem;
+    width: 2.1rem;
   }
 }
 
@@ -143,291 +159,87 @@
   border-radius: 20px;
 }
 
-.about-section {
+
+
+
+
+
+
+
+
+
+
+
+/**Project cards **/
+
+
+
+
+
+
+
+
+
+
+.contact-section {
+  margin-top: 10rem;
+
+  
+}
+
+.contact-card {
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  background: radial-gradient(
-    farthest-side,
-    var(--gradient-clr-1),
-    var(--gradient-clr-2)
-  );
 }
 
-.about-card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: auto;
+.contact-card__content {
+  padding: 20px;
 }
 
-.about-card__body {
-}
-
-.about-card__content,
-.about-card__skills {
-  color: var(--card--text--color);
-  max-width: 50rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-card__header,
-.about-card_skills-header {
-  max-width: 25rem;
-  width: 100%;
-  padding: 10px 0 10px;
-}
-
-.about-card__primary,
-.skills__primary {
-  font-size: 2.3rem;
-  padding: 0 0 0 5px;
-}
-.about-card__body,
-.about-card__skills-body {
-  max-width: 25rem;
-  width: 100%;
-  padding: 0 6px 0 6px;
-}
-.about-card__secondary,
-.skills__secondary {
-  font-weight: normal;
-  font-size: 1.2rem;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.tech-icon {
-  font-size: 1.2em;
-  padding: 0 0 0 10px;
-}
-.tech-icon:nth-child(1) {
-  color: hsl(12, 73%, 51%);
-}
-.tech-icon:nth-child(2) {
-  color: hsl(228, 73%, 51%);
-}
-.tech-icon:nth-child(3) {
-  color: hsl(54, 83%, 51%);
-}
-
-@media (width <= 900px) {
-  .about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about-card {
-  }
-
-  .about-card__content,
-  .about-card__skills {
-    max-width: 22rem;
-
-    gap: 0rem;
-
-    padding: 20px;
-  }
-
-  .about-card__header,
-  .about-card_skills-header {
-    max-width: 20rem;
-  }
-
-  .about-card__primary,
-  .skills__primary {
-    font-size: 1.8rem;
-  }
-  .about-card__body,
-  .about-card__skills-body {
-    max-width: 22rem;
-  }
-  .about-card__secondary,
-  .skills__secondary {
-    font-size: 1rem;
-    display: inline-block;
-  }
-}
-
-.project-section {
-  margin-top: 5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 30rem));
-  grid-auto-rows: 40rem;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.project-card {
-  margin: 0 1rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: rgba(24, 19, 19, 0.25);
-
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-}
-
-.project-card--3 {
-}
-.project-card:hover:before,
-.project-card:hover:after {
-  transition: opacity 250ms ease-in;
-
-  opacity: 1;
-}
-
-/** Chrome */
-.project-card::before,
-.project-card::after {
-  transition: opacity 250ms ease-in-out;
-  border-radius: inherit;
-  content: "";
-  position: absolute;
-  inset: -1px;
-  background: radial-gradient(
-    farthest-side,
-    var(--gradient-clr-1),
-    var(--gradient-clr-2)
-  );
-  background-size: 450% 100%;
-  z-index: -1;
-  opacity: 0;
-  animation: glowingCard 15s ease-in-out;
-}
-@keyframes glowingCard {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
-
-.project-card::after {
-  filter: blur(10px);
-}
-
-.project-card--3 {
-  /* background: none; */
-}
-
-.project-card__header {
-  flex: 0 1 20rem;
-  overflow: hidden;
-  margin: 1rem;
-}
-
-.project-card__header > img {
-  border-radius: 10px;
-}
-
-.scrolling-image-1 {
-  transform: translateY(-54%);
-}
-.scrolling-image-2 {
-  transform: translateY(-30%);
-}
-
-.scrolling-image-1,
-.scrolling-image-2 {
-  height: auto;
-  max-width: 100%;
-  transition: 3s;
-  transform: translateY(0);
-}
-
-.scrolling-image-1.scrolled {
-  transition: 5s;
-  transform: translateY(-54%);
-}
-.scrolling-image-2.scrolled {
-  transition: 5s;
-  transform: translateY(-30%);
-}
-
-@media screen and (width <= 400px) {
-  .scrolling-image-1.scrolled {
-    transform: translateY(-45%);
-  }
-  .scrolling-image-2.scrolled {
-    transform: translateY(-20%);
-  }
-}
-.project-card__body {
-  color: var(--card--text--color);
-  flex: 1 1 auto;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
-}
-.project-card__primary {
-  font-size: 1.6rem;
-  font-weight: normal;
-  padding: 15px;
-}
-.project-card__secondary {
-  font-size: 1.1rem;
-  max-width: 30ch;
-  text-align: center;
-}
-
-.project-card__footer {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  gap: 1rem;
-}
-.github-container {
-  width: 5rem;
-  margin-bottom: 0.3rem;
-}
-
-.demo-container {
-  width: 5rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.3rem;
-}
-
-.project-card--icon {
-  width: 1.5rem;
-}
-
-.demo-container > i {
+.contact-card__header {
   color: white;
-  font-size: 1.3em;
 }
 
-.github-container,
-.demo-container {
+.contact-icons {
   display: flex;
-  gap: 0.5rem;
-  padding: 5px;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 3rem;
+  gap: 5rem;
+  
 }
 
-.github-container,
-.demo-container > span {
-  color: var(--card--text--color);
+.contact-icons__box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5.5rem;
+
+  border-radius: 5px;
+  position: relative;
 }
 
-.name-highlighter:before {
+.contact-icons__box2 {
+  /*  background-color: rgb(40, 31, 55); */
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 3rem;
+}
+.contact-icons__box2 > a::before {
   content: "";
   position: absolute;
-  width: 50%;
-  height: 0.2rem;
-  bottom: 0;
-  background-color: orange;
-  transform: skew(60deg);
+  inset: 0;
+}
+.contact-icons__box1 > a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
