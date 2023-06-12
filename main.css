@@ -82,7 +82,7 @@ body {
   min-height: 100dvh;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 5rem 1fr auto;
+  grid-template-rows: 3.5rem 1fr auto;
 
   position: relative;
 }
@@ -92,7 +92,7 @@ body {
   justify-content: space-between;
 
   z-index: 1;
-  background-color:var(--gradient-clr-3) ;
+  background-color:rgba(42, 31, 63, 0.653) ;
   position: sticky;
   top: 0;
 }
@@ -105,6 +105,10 @@ body {
 .header-logo {
   flex: 0 1 5rem;
   margin-left: 1rem;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header-logo img {
   height: auto;
@@ -275,8 +279,7 @@ body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: calc(100svh - 5rem) 100svh 100svh auto;
-
-  gap: 5rem;
+gap: 7rem;
 }
 
 @media screen and (width <= 1504px) {
@@ -293,12 +296,13 @@ body {
 }
 
 .project-section {
-  margin-top: 7rem;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 30rem));
   grid-auto-rows: 40rem;
   place-content: center;
   gap: 2rem;
+
 }
 
 .project-card {
