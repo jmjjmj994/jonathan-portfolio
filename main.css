@@ -92,8 +92,6 @@ body {
   justify-content: space-between;
 
   z-index: 1;
-
-
 }
 
 .hamburger {
@@ -142,10 +140,10 @@ body {
   .header {
     align-items: center;
     justify-content: flex-end;
-      position: sticky;
-  top: 0;
-  position: sticky;
-  top: 0;
+    position: sticky;
+    top: 0;
+    position: sticky;
+    top: 0;
   }
 
   .header-logo {
@@ -271,10 +269,9 @@ body {
 }
 
 .main {
-
- display: grid;
+  display: grid;
   grid-template-columns: 100%;
-grid-template-rows: calc(100svh - 5rem) min-content max-content auto; 
+  grid-template-rows: calc(100svh - 5rem) min-content max-content auto;
 
   gap: 5rem;
 }
@@ -287,12 +284,12 @@ grid-template-rows: calc(100svh - 5rem) min-content max-content auto;
 }
 
 .project-section {
- margin-top: 5rem;
+  margin-top: 5rem;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 30rem));
   grid-auto-rows: 40rem;
- place-content:center;
+  place-content: center;
   gap: 2rem;
 }
 
@@ -472,4 +469,17 @@ grid-template-rows: calc(100svh - 5rem) min-content max-content auto;
 .github-container,
 .demo-container > span {
   color: var(--card--text--color);
+}
+
+
+#empty-card::after  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Project coming soon";
+  position: absolute;
+  inset: 0;
+  color: white;
+  opacity: 1;
+  filter: blur(0);
 }
