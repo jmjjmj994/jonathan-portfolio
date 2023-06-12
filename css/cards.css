@@ -301,15 +301,13 @@ padding: 5px;
 
 
 .contact-section {
-  margin-top: 10rem;
- 
-
-  
-}
+  margin-top: 15rem;
+ }
 
 .contact-card {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 
 .contact-card__content {
@@ -353,7 +351,13 @@ padding: 5px;
 .contact-icon {
   width: 2.5rem;
   transition: 250ms;
+  position: relative;
 }
+.contact-icon:nth-child(1){
+margin-top: 0.6rem;
+ 
+}
+
 .contact-icon:hover {
    filter: drop-shadow(0 0 10px white);
   transition: 250ms;

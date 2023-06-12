@@ -92,6 +92,9 @@ body {
   justify-content: space-between;
 
   z-index: 1;
+  background-color:var(--gradient-clr-3) ;
+  position: sticky;
+  top: 0;
 }
 
 .hamburger {
@@ -271,11 +274,17 @@ body {
 .main {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: calc(100svh - 5rem) min-content max-content auto;
+  grid-template-rows: calc(100svh - 5rem) 100svh 100svh auto;
 
   gap: 5rem;
 }
 
+@media screen and (width <= 1504px) {
+  .main {
+    
+      grid-template-rows: calc(100svh - 5rem) min-content max-content auto ;
+  }
+}
 .footer-primary {
   color: var(--clr-3);
   font-size: 1rem;
@@ -284,8 +293,7 @@ body {
 }
 
 .project-section {
-  margin-top: 5rem;
-
+  margin-top: 7rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 30rem));
   grid-auto-rows: 40rem;
