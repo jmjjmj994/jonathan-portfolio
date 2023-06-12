@@ -10,6 +10,7 @@
 html {
   line-height: 1.6;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -82,7 +83,8 @@ body {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 5rem 1fr auto;
-  animation: movingBody 2s infinite;
+
+  position: relative;
 }
 
 .header {
@@ -171,6 +173,8 @@ body {
     gap: 5rem;
     opacity: 0;
     width: 100%;
+
+    height: 60%;
   }
 
   .nav-item {
@@ -459,110 +463,34 @@ body {
   transform: skew(60deg);
 }
 
-.about-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.section-jumper {
+  position: fixed;
+  width: 1.5rem;
+  height: 7rem;
+  right: 0;
+  bottom: 50%;
+  margin-right: 0.5rem;
+  border-radius: 5px;
 
-  background-color: #08080827;
+  z-index: 1;
 }
 
-.about-card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: auto;
-}
-
-.about-card__body {
-}
-
-.about-card__content,
-.about-card__skills {
-  color: var(--card--text--color);
-  max-width: 50rem;
-  width: 100%;
+.section-ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-}
+  gap: 5px;
+  border-radius: inherit;
 
-.about-card__header,
-.about-card_skills-header {
-  max-width: 25rem;
+  height: 100%;
   width: 100%;
-  padding: 10px 0 10px;
 }
 
-.about-card__primary,
-.skills__primary {
-  font-size: 2.3rem;
-  padding: 0 0 0 5px;
-}
-.about-card__body,
-.about-card__skills-body {
-  max-width: 25rem;
-  width: 100%;
-  padding: 0 6px 0 6px;
-}
-.about-card__secondary,
-.skills__secondary {
-  font-weight: normal;
-  font-size: 1.2rem;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.tech-icon {
-  font-size: 1.2em;
-  padding: 0 0 0 10px;
-}
-.tech-icon:nth-child(1) {
-  color: hsl(12, 73%, 51%);
-}
-.tech-icon:nth-child(2) {
-  color: hsl(228, 73%, 51%);
-}
-.tech-icon:nth-child(3) {
-  color: hsl(54, 83%, 51%);
-}
-
-@media (width <= 900px) {
-  .about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about-card {
-  }
-
-  .about-card__content,
-  .about-card__skills {
-    max-width: 22rem;
-
-    gap: 0rem;
-
-    padding: 20px;
-  }
-
-  .about-card__header,
-  .about-card_skills-header {
-    max-width: 20rem;
-  }
-
-  .about-card__primary,
-  .skills__primary {
-    font-size: 1.8rem;
-  }
-  .about-card__body,
-  .about-card__skills-body {
-    max-width: 22rem;
-  }
-  .about-card__secondary,
-  .skills__secondary {
-    font-size: 1rem;
-    display: inline-block;
-  }
+.section-item {
+  width: 13px;
+  height: 13px;
+  background-color: #9e9d9d;
+  display: block;
+  border-radius: 50%;
 }

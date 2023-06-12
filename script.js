@@ -1,4 +1,4 @@
-import { header, hamburger, nav, projectImg1, projectImg2, navItem,lightMode} from "./utilities.js";
+import { header, hamburger, nav, projectImg1, projectImg2, navItem} from "./utilities.js";
 
 
 
@@ -15,7 +15,10 @@ import { header, hamburger, nav, projectImg1, projectImg2, navItem,lightMode} fr
 
 
 
+
+
 const highlightNav = navItem.forEach((item) => {
+  
   item.onmouseover = () => {
   item.style.cssText = "color:#efefef"
   }
@@ -25,6 +28,8 @@ const highlightNav = navItem.forEach((item) => {
 
 
 });
+
+
 
 
 
