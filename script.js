@@ -1,4 +1,4 @@
-import { header, hamburger, nav, projectImg1, projectImg2, navItem, logo, projectSection} from "./utilities.js";
+import { header,  nav, projectImg1, projectImg2, navItem} from "./utilities.js";
 
 
 
@@ -22,7 +22,7 @@ const highlightNav = navItem.forEach((item) => {
     item.style.transitionDelay = `${index * 0.05}s` 
     item.classList.toggle("active")
     
-  console.log(item);
+
     
     
   });
@@ -31,28 +31,6 @@ const highlightNav = navItem.forEach((item) => {
 
 
 
-hamburger.onclick = () => {
-
-
-
-
-  let menuOpen = false;
-  if (!menuOpen) {
-
-    hamburger.classList.toggle("active");
-    nav.classList.toggle("active")
-    let menuOpen = true;
-  } else {
-  
-    hamburger.classList.toggle("active");
-    nav.classList.toggle("active")
-    let menuOpen = false;
-  }
-
-
-
-
-};
 
 
 
