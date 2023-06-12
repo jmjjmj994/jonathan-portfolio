@@ -2,10 +2,15 @@ import { header, hamburger, nav, projectImg1, projectImg2, navItem, logo, projec
 
 
 
+const sections = document.querySelectorAll('#section');
 
 
 
-const highlightNav = navItem.forEach((item) => {
+
+console.log(sections)
+
+  
+/* const highlightNav = navItem.forEach((item) => {
   
   item.onmouseover = () => {
   item.style.cssText = "color:#efefef"
@@ -24,12 +29,19 @@ const highlightNav = navItem.forEach((item) => {
 
 
 hamburger.onclick = () => {
+
+
+
   navItem.forEach((item, index) => {
   
     item.style.transitionDelay = `${index * 0.05}s` 
     item.classList.toggle("active")
+    
+  console.log(item);
+    
+    
   });
-
+ 
 
   let menuOpen = false;
   if (!menuOpen) {
@@ -44,11 +56,14 @@ hamburger.onclick = () => {
     let menuOpen = false;
   }
 
+
+
+
 };
 
 
 
-
+ */
 
 
   projectImg1.onmouseenter = () => { 

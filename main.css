@@ -92,7 +92,7 @@ body {
   justify-content: space-between;
 
   z-index: 1;
-  background-color:rgba(42, 31, 63, 0.653) ;
+  background-color: rgba(42, 31, 63, 0.653);
   position: sticky;
   top: 0;
 }
@@ -105,7 +105,7 @@ body {
 .header-logo {
   flex: 0 1 5rem;
   margin-left: 1rem;
- 
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,14 +143,20 @@ body {
   animation: fadeInItem infinite 10s;
 }
 
-@media screen and (width <= 1000px) {
+
+@media screen and (width <= 450px) {
+  .nav-item {
+   
+    font-size: 0.8rem;
+  }
+}
+
+/* @media screen and (width <= 1000px) {
   .header {
     align-items: center;
     justify-content: flex-end;
-    position: sticky;
-    top: 0;
-    position: sticky;
-    top: 0;
+
+ 
   }
 
   .header-logo {
@@ -168,7 +174,7 @@ body {
     width: 0%;
 
     transition: 0.3s;
-    /* width: 10rem; */
+   
   }
 
   .nav.active {
@@ -270,22 +276,18 @@ body {
     transform: rotate(0);
   }
 
-  /** Animations*/
-
-  /** */
-}
+} */
 
 .main {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: calc(100svh - 5rem) 100svh 100svh auto;
-gap: 7rem;
+  gap: 7rem;
 }
 
 @media screen and (width <= 1504px) {
   .main {
-    
-      grid-template-rows: calc(100svh - 5rem) min-content max-content auto ;
+    grid-template-rows: calc(100svh - 5rem) min-content max-content auto;
   }
 }
 .footer-primary {
@@ -296,13 +298,11 @@ gap: 7rem;
 }
 
 .project-section {
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 30rem));
   grid-auto-rows: 40rem;
   place-content: center;
   gap: 2rem;
-
 }
 
 .project-card {
@@ -483,8 +483,7 @@ gap: 7rem;
   color: var(--card--text--color);
 }
 
-
-#empty-card::after  {
+#empty-card::after {
   display: flex;
   justify-content: center;
   align-items: center;
