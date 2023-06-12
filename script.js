@@ -2,15 +2,8 @@ import { header, hamburger, nav, projectImg1, projectImg2, navItem, logo, projec
 
 
 
-const sections = document.querySelectorAll('#section');
-
-
-
-
-console.log(sections)
-
   
-/* const highlightNav = navItem.forEach((item) => {
+const highlightNav = navItem.forEach((item) => {
   
   item.onmouseover = () => {
   item.style.cssText = "color:#efefef"
@@ -24,14 +17,6 @@ console.log(sections)
 
 
 
-
-
-
-
-hamburger.onclick = () => {
-
-
-
   navItem.forEach((item, index) => {
   
     item.style.transitionDelay = `${index * 0.05}s` 
@@ -42,6 +27,14 @@ hamburger.onclick = () => {
     
   });
  
+
+
+
+
+hamburger.onclick = () => {
+
+
+
 
   let menuOpen = false;
   if (!menuOpen) {
@@ -63,7 +56,7 @@ hamburger.onclick = () => {
 
 
 
- */
+
 
 
   projectImg1.onmouseenter = () => { 
