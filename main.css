@@ -92,6 +92,8 @@ body {
   justify-content: space-between;
 
   z-index: 1;
+
+
 }
 
 .hamburger {
@@ -133,12 +135,17 @@ body {
   letter-spacing: 0;
   padding: 0 5px;
   transition: 250ms;
+  animation: fadeInItem infinite 10s;
 }
 
 @media screen and (width <= 1000px) {
   .header {
     align-items: center;
     justify-content: flex-end;
+      position: sticky;
+  top: 0;
+  position: sticky;
+  top: 0;
   }
 
   .header-logo {
@@ -264,9 +271,11 @@ body {
 }
 
 .main {
-  display: grid;
+
+ display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: calc(100svh - 5rem) auto max-content auto;
+grid-template-rows: calc(100svh - 5rem) min-content max-content auto; 
+
   gap: 5rem;
 }
 
@@ -278,11 +287,12 @@ body {
 }
 
 .project-section {
-  margin-top: 5rem;
+ margin-top: 5rem;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 30rem));
   grid-auto-rows: 40rem;
-  justify-content: center;
+ place-content:center;
   gap: 2rem;
 }
 
@@ -318,7 +328,7 @@ body {
   background: radial-gradient(
     farthest-side,
     var(--card--clr-1),
-    var(--card--clr-2)
+    var(--gradient-clr-2)
   );
   background-size: 450% 100%;
   z-index: -1;
@@ -430,8 +440,19 @@ body {
 .project-card--icon {
   width: 1.1rem;
   display: block;
+  transition: 250ms;
 }
-
+.project-card--icon:hover {
+  filter: drop-shadow(0 0 10px white);
+  transition: 250ms;
+}
+.glowing-square {
+  transition: 250ms;
+}
+.glowing-square:hover {
+  filter: drop-shadow(0 0 10px white);
+  transition: 250ms;
+}
 .demo-container > i {
 }
 .demo-container > a {
@@ -451,46 +472,4 @@ body {
 .github-container,
 .demo-container > span {
   color: var(--card--text--color);
-}
-
-.name-highlighter:before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 0.2rem;
-  bottom: 0;
-  background-color: orange;
-  transform: skew(60deg);
-}
-
-.section-jumper {
-  position: fixed;
-  width: 1.5rem;
-  height: 7rem;
-  right: 0;
-  bottom: 50%;
-  margin-right: 0.5rem;
-  border-radius: 5px;
-
-  z-index: 1;
-}
-
-.section-ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 5px;
-  border-radius: inherit;
-
-  height: 100%;
-  width: 100%;
-}
-
-.section-item {
-  width: 13px;
-  height: 13px;
-  background-color: #9e9d9d;
-  display: block;
-  border-radius: 50%;
 }
